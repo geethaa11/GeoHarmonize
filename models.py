@@ -38,6 +38,7 @@ class Conflict(Base):
         primary_key=True,
         default=uuid.uuid4,
     )
+
     parcel_id = Column(
         String,
         ForeignKey("land_parcels.parcel_id"),
@@ -53,3 +54,25 @@ class Conflict(Base):
     source_b = Column(String, nullable=False)
 
     parcel = relationship("Parcel", back_populates="conflicts")
+
+
+class Verification(Base):
+    __tablename__ = "verification"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    parcel_id = Column(
+        String,
+        ForeignKey("land_parcels.parcel_id"),
+        nullable=False,
+        index=True,
+    )
+
+    conflict_id = Column(
+        UUID(as_uuid=True),
+        ForeignKey("conflicts.conflict_id"),
+        nullable=True,
+    )
+
+    action = Column(String, nullable=False)
+    comment = Column(Text, nullable=True)
