@@ -12,6 +12,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      PYTHONPATH: ${{ github.workspace }}/conflict_detection_sih26013
+      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
