@@ -1,8 +1,14 @@
 from fastapi import FastAPI
 
+from .database import Base, engine
+
+from . import models
+
+Base.metadata.create_all(bind=engine)
+
 app = FastAPI(
     title="GeoHarmonize API",
-    description="Backend API for multi-source geospatial land record management",
+    description="Backend API for urban land record management",
     version="1.0.0",
 )
 
