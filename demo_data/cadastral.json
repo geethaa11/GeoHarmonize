@@ -1,0 +1,154 @@
+[
+  {
+    "parcel_id": "P001",
+    "geometry": "POLYGON((0 0, 0 10, 10 10, 10 0, 0 0))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "cadastral",
+    "attributes": {
+      "owner": "Alice"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P002",
+    "geometry": "POLYGON((20 0, 20 10, 30 10, 30 0, 20 0))",
+    "area": 100.0,
+    "land_type": "Commercial",
+    "source": "cadastral",
+    "attributes": {},
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P003",
+    "geometry": "POLYGON((40 0, 40 10, 50 10, 50 0, 40 0))",
+    "area": 100.0,
+    "land_type": "Agricultural",
+    "source": "cadastral",
+    "attributes": {
+      "zone": "Agri-1"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P004",
+    "geometry": "POLYGON((60 0, 60 10, 70 10, 70 0, 60 0))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "cadastral",
+    "attributes": {
+      "plot_no": "A"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P004",
+    "geometry": "POLYGON((80 0, 80 10, 90 10, 90 0, 80 0))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "cadastral",
+    "attributes": {
+      "plot_no": "B"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P005",
+    "geometry": "POLYGON((100 0, 100 10, 110 10, 110 0, 100 0))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "cadastral",
+    "attributes": {
+      "owner": "Bob"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P006",
+    "geometry": "POLYGON((120 0, 120 10, 130 10, 130 0, 120 0))",
+    "area": 100.0,
+    "land_type": "Public",
+    "source": "cadastral",
+    "attributes": {
+      "use": "Park"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P007",
+    "geometry": "POLYGON((140 20, 140 30, 150 30, 150 20, 140 20))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "cadastral",
+    "attributes": {
+      "note": "Standard plot"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P008",
+    "geometry": "POLYGON((160 20, 160 30, 170 30, 170 20, 160 20))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "cadastral",
+    "attributes": {
+      "note": "Standard plot"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P009",
+    "geometry": "POLYGON((180 20, 180 30, 190 30, 190 20, 180 20))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "cadastral",
+    "attributes": {
+      "note": "Standard plot"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P010",
+    "geometry": "POLYGON((200 20, 200 30, 210 30, 210 20, 200 20))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "cadastral",
+    "attributes": {
+      "note": "Standard plot"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  }
+]

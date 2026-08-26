@@ -1,0 +1,72 @@
+[
+  {
+    "parcel_id": "P001",
+    "geometry": "POLYGON((0 0, 0 10, 10 10, 10 0, 0 0))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "municipal",
+    "attributes": {
+      "owner": "Alice"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P005",
+    "geometry": "POLYGON((100 0, 100 10, 110 10, 110 0, 100 0))",
+    "area": 100.0,
+    "land_type": "Commercial",
+    "source": "municipal",
+    "attributes": {
+      "owner": "Bob"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P006",
+    "geometry": "POLYGON((120 0, 120 10, 130 10, 130 0, 120 0))",
+    "area": 100.0,
+    "land_type": "Public",
+    "source": "municipal",
+    "attributes": {
+      "use": "Park"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P007",
+    "geometry": "POLYGON((140 20, 140 30, 150 30, 150 20, 140 20))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "municipal",
+    "attributes": {
+      "tax_paid": true
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P009",
+    "geometry": "POLYGON((180 20, 180 30, 190 30, 190 20, 180 20))",
+    "area": 100.0,
+    "land_type": "Residential",
+    "source": "municipal",
+    "attributes": {
+      "tax_paid": true
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  }
+]

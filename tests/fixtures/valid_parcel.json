@@ -1,0 +1,13 @@
+{
+  "parcel_id": "P006",
+  "geometry": "POLYGON((120 0, 120 10, 130 10, 130 0, 120 0))",
+  "area": 100.0,
+  "land_type": "Public",
+  "source": "cadastral",
+  "attributes": {
+    "use": "Park"
+  },
+  "confidence": 0.9,
+  "conflicts": [],
+  "status": "pending"
+}

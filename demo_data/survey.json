@@ -1,0 +1,82 @@
+[
+  {
+    "parcel_id": "P001",
+    "geometry": "POLYGON((0 0, 0 10, 10 10, 10 0, 0 0))",
+    "area": 120.0,
+    "land_type": "Residential",
+    "source": "survey",
+    "attributes": {
+      "owner": "Alice"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P002",
+    "geometry": "POLYGON((25 0, 25 10, 35 10, 35 0, 25 0))",
+    "area": 100.0,
+    "land_type": "Commercial",
+    "source": "survey",
+    "attributes": {},
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P003",
+    "geometry": "POLYGON((40 0, 40 10, 50 10, 50 0, 40 0))",
+    "area": 100.0,
+    "land_type": "Agricultural",
+    "source": "survey",
+    "attributes": {},
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P006",
+    "geometry": "POLYGON((120 0, 120 10, 130 10, 130 0, 120 0))",
+    "area": 100.0,
+    "land_type": "Public",
+    "source": "survey",
+    "attributes": {
+      "use": "Park"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P008",
+    "geometry": "POLYGON((160 20, 160 30, 170 30, 170 20, 160 20))",
+    "area": 100.5,
+    "land_type": "Residential",
+    "source": "survey",
+    "attributes": {
+      "note": "Surveyed plot"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "P010",
+    "geometry": "POLYGON((200 20, 200 30, 210 30, 210 20, 200 20))",
+    "area": 100.5,
+    "land_type": "Residential",
+    "source": "survey",
+    "attributes": {
+      "note": "Surveyed plot"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  }
+]
