@@ -1,6 +1,6 @@
 from typing import Any, Dict, List
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 
 class ConflictBase(BaseModel):
@@ -16,8 +16,21 @@ class ConflictBase(BaseModel):
 class ConflictResponse(ConflictBase):
     conflict_id: str
 
+    model_config = ConfigDict(from_attributes=True)
+
 
 class ParcelBase(BaseModel):
+    parcel_id: str
+    geometry: str
+    area: float
+    land_type: str
+    source: str
+    attributes: Dict[str, Any] = {}
+    confidence: float = Field(ge=0.0, le=1.0)
+    status: str = "pending"
+
+
+class ParcelCreate(BaseModel):
     parcel_id: str
     geometry: str
     area: float
@@ -31,9 +44,7 @@ class ParcelBase(BaseModel):
 class ParcelResponse(ParcelBase):
     conflicts: List[ConflictResponse] = []
 
-
-class ParcelCreate(ParcelBase):
-    pass
+    model_config = ConfigDict(from_attributes=True)
 
 
 class ParcelListResponse(BaseModel):
