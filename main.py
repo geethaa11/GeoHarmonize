@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 from .database import Base, engine
 from . import models
-from .routers import parcels
+from .routers import parcels, conflicts
 
 Base.metadata.create_all(bind=engine)
 
@@ -13,7 +13,7 @@ app = FastAPI(
 )
 
 app.include_router(parcels.router)
-
+app.include_router(conflicts.router)
 
 @app.get("/")
 def root():
