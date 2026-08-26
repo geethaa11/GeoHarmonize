@@ -44,3 +44,10 @@ class ParcelListResponse(BaseModel):
 class ConflictListResponse(BaseModel):
     total: int
     conflicts: List[ConflictResponse]
+
+
+class VerificationCreate(BaseModel):
+    parcel_id: str
+    conflict_id: str | None = None
+    action: str
+    comment: str | None = None
