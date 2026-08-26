@@ -1,11 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from ..database import get_db
-from ..models import Parcel
-from ..schemas import ParcelCreate, ParcelListResponse, ParcelResponse
+from database import get_db
+from models import Parcel
+from schemas import ParcelCreate, ParcelListResponse, ParcelResponse
 
-router = APIRouter(prefix="/api/v1/parcels", tags=["Parcels"])
+router = APIRouter(
+    prefix="/api/v1/parcels",
+    tags=["Parcels"],
+)
 
 
 @router.get("", response_model=ParcelListResponse)
@@ -34,7 +37,10 @@ def get_parcels(
 
 
 @router.get("/{parcel_id}", response_model=ParcelResponse)
-def get_parcel(parcel_id: str, db: Session = Depends(get_db)):
+def get_parcel(
+    parcel_id: str,
+    db: Session = Depends(get_db),
+):
     parcel = (
         db.query(Parcel)
         .filter(Parcel.parcel_id == parcel_id)
@@ -55,12 +61,6 @@ def create_parcels(
     parcels: list[ParcelCreate],
     db: Session = Depends(get_db),
 ):
-    if not isinstance(parcels, list):
-        raise HTTPException(
-            status_code=400,
-            detail="Invalid payload format",
-        )
-
     inserted_count = 0
 
     for parcel_data in parcels:
