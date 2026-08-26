@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from ..database import get_db
-from ..models import Conflict, Parcel, Verification
-from ..schemas import VerificationCreate
+from database import get_db
+from models import Conflict, Parcel, Verification
+from schemas import VerificationCreate
 
 router = APIRouter(
     prefix="/api/v1/verification",
