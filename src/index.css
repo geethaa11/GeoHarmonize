@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-paper text-ink font-body antialiased;
+}
+
+/* Cadastral seal marker used for verified / harmonized status */
+.seal-mark {
+  position: relative;
+}
+.seal-mark::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 1.5px dashed theme('colors.seal.DEFAULT');
+  border-radius: 9999px;
+  opacity: 0.5;
+}
+
+/* Leaflet container needs explicit height */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #E9EBE4;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.ink.600');
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Visible keyboard focus */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid theme('colors.contour.DEFAULT');
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
