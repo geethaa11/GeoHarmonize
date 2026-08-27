@@ -5,7 +5,7 @@ from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import relationship
 from geoalchemy2 import Geometry
 
-from .database import Base
+from database import Base
 
 
 class Parcel(Base):
