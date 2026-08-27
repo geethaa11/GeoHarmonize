@@ -1,33 +1,105 @@
-# GeoHarmonize (SIH 2026 - TQ-1787301581589)
+# GeoDesk — Frontend (SIH26013)
 
-Multi-source geospatial data integration and harmonization platform for urban land record management.
+Frontend dashboard for **SIH26013: Automated Integration and Intelligent
+Harmonization of Multi-source Geospatial Data for Urban Land Record
+Management**.
 
-## Setup Instructions
+This is your (Bavadharani's) part of the team project: the web dashboard
+that will eventually sit on top of the backend + GIS harmonization
+pipeline your teammates are building.
 
-1. Clone this repository.
-2. Install Python 3.10+ and standard tools.
-3. Run `pip install -r requirements.txt` to install unified dependencies.
-4. Copy `.env.example` to `.env` and fill in necessary details.
-5. Run `docker-compose up -d` to start the local PostgreSQL/PostGIS database.
+## What's in here
 
-## Integration & Contracts
-Please review the following documentation before beginning module development:
-- **[API Contract & Schemas](API_CONTRACT.md)**: Exact JSON structures and endpoint definitions.
-- **[Multi-Developer Integration Guide](INTEGRATION.md)**: How Dev 1-4 interact with the system.
+- **React 18 + Vite** — fast dev server, simple build
+- **React Router** — page navigation
+- **Tailwind CSS** — styling, using a custom "surveyor's ledger" theme
+  (navy ink, brass/gold "seal" accents for verified data, teal for
+  harmonized status, contour-line texture)
+- **react-leaflet** — interactive map showing land parcels
+- **recharts** — charts on the overview dashboard
 
-## Running the Application
+## Pages
 
-- **Backend:** `uvicorn app.main:app --reload` (Mocked for now)
-- **Frontend:** To be determined (React/Vue)
+| Route         | What it shows                                              |
+|---------------|-------------------------------------------------------------|
+| `/`           | Overview — key stats, map preview, conflict chart, activity feed |
+| `/map`        | Full map explorer with status filters                      |
+| `/sources`    | Connected data sources table + a drag-and-drop upload zone  |
+| `/records`    | Searchable table of harmonized land parcels                 |
+| `/conflicts`  | List of parcels where sources disagree, with review actions |
 
-## Test Instructions
+## Running it locally
 
-To run the integration and API test suites:
 ```bash
-pytest tests/
+npm install
+npm run dev
 ```
 
-*Note: As of Phase 1, the test suite contains fixtures and mocks based on the Shared Data Contract to validate future modules.*
+Then open the URL Vite prints (usually `http://localhost:5173`).
 
-## Demo Data
-Check the `demo_data/` folder for synthetic datasets representing cadastral, survey, and municipal sources covering core conflict scenarios. All data is for illustrative purposes only.
+To build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Important: this currently uses MOCK DATA
+
+All the data on these pages comes from `src/data/mockData.js`. There is
+no backend connected yet. When your teammates' API is ready:
+
+1. Open `src/data/mockData.js`.
+2. Replace the exported constants with `fetch()` calls to the real API
+   (or create a small `src/api/` folder with functions like
+   `getDataSources()`, `getLandRecords()`, etc., and call those from the
+   pages instead of importing the mock arrays directly).
+3. The component code in `src/pages/` and `src/components/` shouldn't
+   need to change much — they just expect the same shape of data
+   (see the objects in `mockData.js` for the exact fields each page
+   expects, e.g. a parcel needs `id`, `village`, `surveyNo`, `owner`,
+   `status`, `lat`, `lng`, etc.).
+
+## Pushing this to your team's repository
+
+Since you're extracting this from a zip:
+
+```bash
+# from inside the extracted folder
+git init                                   # only if this repo isn't already a git repo
+git remote add origin <your-team-repo-url> # skip if remote already exists
+git add .
+git commit -m "Add frontend dashboard for SIH26013"
+git branch -M main                         # or whatever branch your team uses
+git push -u origin main
+```
+
+If your team already has a repo with other people's code in it, it's
+usually safer to:
+
+```bash
+git clone <your-team-repo-url>
+# copy the contents of this extracted folder into the cloned repo
+# (merge carefully if there's already a frontend folder)
+cd <cloned-repo-folder>
+git checkout -b frontend-dashboard
+git add .
+git commit -m "Add frontend dashboard for SIH26013"
+git push -u origin frontend-dashboard
+# then open a pull request into main
+```
+
+Ask your teammates which of these two flows matches how your repo is
+set up before pushing.
+
+## Project structure
+
+```
+src/
+  components/     Reusable UI pieces (Sidebar, Topbar, ParcelMap, StatCard, StatusBadge)
+  pages/          One file per route (Overview, MapExplorer, DataSources, LandRecords, Conflicts)
+  data/           mockData.js — swap this for real API calls later
+  App.jsx         Routes
+  main.jsx        App entry point
+  index.css       Tailwind + global styles
+```
