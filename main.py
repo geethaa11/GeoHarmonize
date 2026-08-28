@@ -4,6 +4,7 @@ from database import Base, engine
 import models
 import parcels
 import verification
+import conflicts
 
 Base.metadata.create_all(bind=engine)
 
@@ -14,6 +15,7 @@ app = FastAPI(
 )
 
 app.include_router(parcels.router)
+app.include_router(conflicts.router)
 app.include_router(verification.router)
 
 
