@@ -50,4 +50,4 @@ def get_conflict(
             detail="Conflict not found",
         )
 
-    return conflict
+    return conflic
