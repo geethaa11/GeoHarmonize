@@ -1,12 +1,17 @@
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Literal
 
 from pydantic import BaseModel, Field
 
 
 class ConflictBase(BaseModel):
     parcel_id: str
-    conflict_type: str
-    severity: str
+    conflict_type: Literal[
+        "area_mismatch",
+        "geometry_overlap",
+        "attribute_mismatch",
+        "duplicate_id",
+    ]
+    severity: Literal["low", "medium", "high", "critical"]
     confidence: float = Field(ge=0.0, le=1.0)
     description: str
     source_a: str
@@ -22,10 +27,10 @@ class ParcelBase(BaseModel):
     geometry: str
     area: float
     land_type: str
-    source: str
+    source: Literal["cadastral", "survey", "municipal"]
     attributes: Dict[str, Any] = Field(default_factory=dict)
     confidence: float = Field(ge=0.0, le=1.0)
-    status: str = "pending"
+    status: Literal["pending", "harmonized", "flagged"] = "pending"
 
 
 class ParcelResponse(ParcelBase):
