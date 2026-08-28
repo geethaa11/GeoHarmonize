@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from ..database import get_db
-from ..models import Conflict
-from ..schemas import ConflictListResponse, ConflictResponse
+from database import get_db
+from models import Conflict
+from schemas import ConflictListResponse, ConflictResponse
 
 router = APIRouter(
     prefix="/api/v1/conflicts",
