@@ -1,0 +1,44 @@
+[
+  {
+    "parcel_id": "C001",
+    "geometry": "POLYGON ((0 0, 0 10, 10 10, 10 0, 0 0))",
+    "area": 1245542622548.8672,
+    "land_type": "Residential",
+    "source": "cadastral",
+    "attributes": {
+      "owner_name": "Alice"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "C002",
+    "geometry": "POLYGON ((10 0, 10 10, 20 10, 20 0, 10 0))",
+    "area": 1245542622548.8672,
+    "land_type": "Commercial",
+    "source": "cadastral",
+    "attributes": {
+      "owner_name": "Bob"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "C003",
+    "geometry": "POLYGON ((20 0, 20 10, 30 10, 30 0, 20 0))",
+    "area": 1245542622548.867,
+    "land_type": "Agricultural",
+    "source": "cadastral",
+    "attributes": {
+      "owner_name": "Charlie"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  }
+]
