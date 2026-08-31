@@ -1,0 +1,30 @@
+[
+  {
+    "parcel_id": "M001",
+    "geometry": "POLYGON ((0.0001796630568239 0, 0.0001796630568239 8.983152841191533e-5, 0.0002694945852359 8.983152841191533e-5, 0.0002694945852359 0, 0.0001796630568239 0))",
+    "area": 99.99999999999997,
+    "land_type": "Commercial",
+    "source": "municipal",
+    "attributes": {
+      "tax_status": "Paid"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "M002",
+    "geometry": "POLYGON ((0.0002694945852359 0, 0.0002694945852359 8.983152841191533e-5, 0.0003593261136478 8.983152841191533e-5, 0.0003593261136478 0, 0.0002694945852359 0))",
+    "area": 99.99999999999993,
+    "land_type": "Residential",
+    "source": "municipal",
+    "attributes": {
+      "tax_status": "Unpaid"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  }
+]

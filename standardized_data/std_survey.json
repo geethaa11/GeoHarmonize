@@ -1,0 +1,32 @@
+[
+  {
+    "parcel_id": "S001",
+    "geometry": "POLYGON ((0 0, 0 10.1, 10.1 10.1, 10.1 0, 0 0))",
+    "area": 1270709039236.834,
+    "land_type": "Residential",
+    "source": "survey",
+    "attributes": {
+      "surveyor": "John",
+      "wkt": "POLYGON((0 0, 0 10.1, 10.1 10.1, 10.1 0, 0 0))"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  },
+  {
+    "parcel_id": "S002",
+    "geometry": "POLYGON ((100 100, 100 110, 110 110, 110 100, 100 100))",
+    "area": NaN,
+    "land_type": "Public",
+    "source": "survey",
+    "attributes": {
+      "surveyor": "Jane",
+      "wkt": "POLYGON((100 100, 100 110, 110 110, 110 100, 100 100))"
+    },
+    "confidence": 0.9,
+    "conflicts": [],
+    "status": "pending",
+    "_note": "Illustrative / Demo Data"
+  }
+]
