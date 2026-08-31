@@ -32,4 +32,4 @@ jobs:
 
       - name: Run tests
         run: |
-          PYTHONPATH=.:./conflict_detection_sih26013 pytest -v
+          pytest -v
