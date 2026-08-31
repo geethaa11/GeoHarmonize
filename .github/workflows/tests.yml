@@ -13,9 +13,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    env:
-      PYTHONPATH: ${{ github.workspace }}:${{ github.workspace }}/conflict_detection_sih26013
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,4 +29,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest -v
+          PYTHONPATH="${GITHUB_WORKSPACE}:${GITHUB_WORKSPACE}/conflict_detection_sih26013" pytest -v
