@@ -29,4 +29,7 @@ jobs:
 
       - name: Run tests
         run: |
-          PYTHONPATH="${GITHUB_WORKSPACE}:${GITHUB_WORKSPACE}/conflict_detection_sih26013" pytest -v
+          export PYTHONPATH="${GITHUB_WORKSPACE}:${GITHUB_WORKSPACE}/conflict_detection_sih26013"
+          echo "PYTHONPATH=$PYTHONPATH"
+          python -c "import etl; import conflict_detection; print('Imports OK')"
+          pytest -v
